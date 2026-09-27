@@ -38,7 +38,7 @@
 
 Для установки агента на **РЕД ОС** используется команда выданная web-панелью:
 
-```cmd
+```bash
 curl -o wazuh-agent-4.14.7-1.x86_64.rpm https://packages.wazuh.com/4.x/yum/wazuh-agent-4.14.7-1.x86_64.rpm && sudo WAZUH_MANAGER='192.168.0.100' WAZUH_AGENT_NAME='Redos' rpm -ihv wazuh-agent-4.14.7-1.x86_64.rpm
 ```
 
@@ -46,7 +46,7 @@ curl -o wazuh-agent-4.14.7-1.x86_64.rpm https://packages.wazuh.com/4.x/yum/wazuh
 
 Запуск агента:
 
-```cmd
+```bash
 sudo systemctl daemon-reload
 sudo systemctl enable wazuh-agent
 sudo systemctl start wazuh-agent
@@ -64,4 +64,10 @@ sudo systemctl start wazuh-agent
 
 ## Проверка модулей
 
+На **Агенте** нужно проверить что система верно установилась и сервер может собирать информацию об ОС. Для этого нужно проверить блок `syscollector`:
 
+```bash
+sudo nano /var/ossec/etc/ossec.conf
+```
+
+<img width="436" height="425" alt="изображение" src="https://github.com/user-attachments/assets/a08c7d3b-7ad2-42ee-a65d-7f9d4e69655d" />
