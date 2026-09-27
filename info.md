@@ -28,7 +28,7 @@ sudo systemctl start wazuh-agent
 
 Далее необходимо заполнить поля:
 
-<img width="1912" height="1838" alt="изображение" src="https://github.com/user-attachments/assets/be0f80e0-28f0-4fa2-8b15-db66892f05df" />
+<img width="1912" height="1837" alt="изображение" src="https://github.com/user-attachments/assets/6dc2a8ae-5be6-4d8f-a199-e2d1eb1a0096" />
 
 ## Подготовка и настройка РЕД ОС
 
