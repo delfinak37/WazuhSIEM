@@ -76,3 +76,9 @@ sudo nano /var/ossec/etc/ossec.conf
 
 <img width="416" height="93" alt="изображение" src="https://github.com/user-attachments/assets/a3f286eb-82c7-4382-a4de-75a48f497087" />
 
+## Инвентаризация
+
+На странице `IT Hygiene` можно ознакомится с более подробным описанием системы, значит сервер успешно работает и поддерживает сбор RPM-пакетов:
+
+<img width="1915" height="1039" alt="изображение" src="https://github.com/user-attachments/assets/23ed5190-910d-4936-bc9d-fdeba314451c" />
+
