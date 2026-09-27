@@ -1,9 +1,3 @@
-curl -o wazuh-agent-4.14.7-1.x86_64.rpm https://packages.wazuh.com/4.x/yum/wazuh-agent-4.14.7-1.x86_64.rpm && sudo WAZUH_MANAGER='192.168.0.100' WAZUH_AGENT_NAME='Redos' rpm -ihv wazuh-agent-4.14.7-1.x86_64.rpm
-
-sudo systemctl daemon-reload
-sudo systemctl enable wazuh-agent
-sudo systemctl start wazuh-agent
-
 ## Подготовка и настройка Wazuh
 
 - [Официальный образ wazuh](https://packages.wazuh.com/4.x/vm/wazuh-4.14.7.ova)
@@ -38,15 +32,17 @@ sudo systemctl start wazuh-agent
 
 Сетевой адаптер также используется `Bridged`:
 
-<img width="298" height="396" alt="изображение" src="https://github.com/user-attachments/assets/22bf47ef-41c4-4369-8c05-400d110a7d59" />
+<img width="302" height="392" alt="изображение" src="https://github.com/user-attachments/assets/aecfc2d9-b472-4c97-894f-0bfc5450f8ee" />
+
+<img width="728" height="348" alt="изображение" src="https://github.com/user-attachments/assets/80ada8ad-b273-4e22-8820-af98ff739512" />
 
 Для установки агента на **РЕД ОС** используется команда выданная web-панелью:
 
 ```cmd
-curl -o wazuh-agent-4.14.7-1.x86_64.rpm https://packages.wazuh.com/4.x/yum/wazuh-agent-4.14.7-1.x86_64.rpm && sudo WAZUH_MANAGER='192.168.188.132' WAZUH_AGENT_NAME='Redos' rpm -ihv wazuh-agent-4.14.7-1.x86_64.rpm
+curl -o wazuh-agent-4.14.7-1.x86_64.rpm https://packages.wazuh.com/4.x/yum/wazuh-agent-4.14.7-1.x86_64.rpm && sudo WAZUH_MANAGER='192.168.0.100' WAZUH_AGENT_NAME='Redos' rpm -ihv wazuh-agent-4.14.7-1.x86_64.rpm
 ```
 
-<img width="1276" height="220" alt="изображение" src="https://github.com/user-attachments/assets/b330d42f-35e6-4025-95c1-9a1248e11178" />
+<img width="725" height="266" alt="изображение" src="https://github.com/user-attachments/assets/52f6986c-aeda-414d-9515-2c2bb9678a37" />
 
 Запуск агента:
 
@@ -56,4 +52,4 @@ sudo systemctl enable wazuh-agent
 sudo systemctl start wazuh-agent
 ```
 
-<img width="1145" height="106" alt="изображение" src="https://github.com/user-attachments/assets/1ee0ae51-da09-45bc-9a2b-58e890619901" />
+<img width="729" height="248" alt="изображение" src="https://github.com/user-attachments/assets/c491e21e-5b62-4627-8268-f7259d095b24" />
