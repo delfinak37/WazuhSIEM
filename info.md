@@ -5,9 +5,9 @@
 Чтобы установить **Wazuh** в виртуальном окружении достаточно просто скопировать файл `.ova` в **VMware**. Для того чтобы другие виртуальные машины смогли 
 обнаружить **Wazuh**, будет использован сетевой адаптер `NAT`:
 
-<img width="302" height="448" alt="изображение" src="https://github.com/user-attachments/assets/7777ca51-9e7a-4975-a0a8-5508176d0fc5" />
+<img width="301" height="426" alt="изображение" src="https://github.com/user-attachments/assets/39039f9d-66ae-48a5-b8d0-4195271eb763" />
 
-<img width="813" height="243" alt="изображение" src="https://github.com/user-attachments/assets/fe51548b-78de-4493-8325-11420cde23a7" />
+<img width="810" height="259" alt="изображение" src="https://github.com/user-attachments/assets/849dbcbb-08c7-4af0-ab6b-5d75abf246c0" />
 
 Вход в web-панель **Wazuh**:
 
