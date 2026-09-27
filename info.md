@@ -134,4 +134,4 @@ sudo nano /var/ossec/etc/ossec.conf
 
 <img width="1923" height="898" alt="изображение" src="https://github.com/user-attachments/assets/7bf7f80f-5f62-443a-94dd-a79f3b64f9ae" />
 
-Единственная непройденная проверка связана с состоянием firewalld, поскольку данный сервис был отключён.
+  - Единственная непройденная проверка связана с состоянием firewalld, поскольку данный сервис был отключён.
