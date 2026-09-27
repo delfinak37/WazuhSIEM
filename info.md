@@ -8,10 +8,10 @@ sudo systemctl start wazuh-agent
 
 - [Официальный образ wazuh](https://packages.wazuh.com/4.x/vm/wazuh-4.14.7.ova)
 
-Чтобы установить **Wazuh** в виртуальном окружении достаточно просто скопировать файл `.ova` в **VMware**. Для того чтобы другие виртуальные машины смогли 
-обнаружить **Wazuh**, будет использован сетевой адаптер `NAT`:
+Чтобы установить **Wazuh** в виртуальном окружении достаточно просто скопировать файл `.ova` в **VMware**. В данном проекте **Wazuh** был установлен на домашнем ПК, а 
+**РЕД ОС** на ноутбуке в той же локальной сети. Для того чтобы виртуальные машины смогли обнаружить друг друга, будет использован сетевой адаптер `Bridged`:
 
-<img width="301" height="426" alt="изображение" src="https://github.com/user-attachments/assets/39039f9d-66ae-48a5-b8d0-4195271eb763" />
+<img width="296" height="428" alt="изображение" src="https://github.com/user-attachments/assets/7f7a9e4d-a5e4-4c7c-b8dd-c48c2e1eed8c" />
 
 <img width="810" height="259" alt="изображение" src="https://github.com/user-attachments/assets/849dbcbb-08c7-4af0-ab6b-5d75abf246c0" />
 
@@ -36,7 +36,7 @@ sudo systemctl start wazuh-agent
 
 При установке **РЕД ОС** можно воспользоваться инструкцией с официального сайта - [Инструкция для установки РЕД ОС](https://redos.red-soft.ru/base/redos-8_0/8_0-install/8_0-install-red-os/#start)
 
-Сетевой адаптер также используется `NAT`:
+Сетевой адаптер также используется `Bridged`:
 
 <img width="298" height="396" alt="изображение" src="https://github.com/user-attachments/assets/22bf47ef-41c4-4369-8c05-400d110a7d59" />
 
