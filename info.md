@@ -82,7 +82,7 @@ sudo nano /var/ossec/etc/ossec.conf
 
 ## Инвентаризация
 
-На странице `IT Hygiene` можно ознакомится с более подробным описанием системы, значит сервер успешно работает и поддерживает сбор RPM-пакетов:
+На странице `IT Hygiene` можно ознакомится с более подробным описанием системы, выходит что сервер успешно работает и поддерживает сбор RPM-пакетов:
 
 <img width="1915" height="1039" alt="изображение" src="https://github.com/user-attachments/assets/23ed5190-910d-4936-bc9d-fdeba314451c" />
 
@@ -90,6 +90,7 @@ sudo nano /var/ossec/etc/ossec.conf
 
 В **Wazuh** был включён модуль `Vulnerability Detection`. По журналам можно увидеть, что модуль успешно запускается, обновляет базу уязвимостей и выполняет повторное сканирование:
 
+<img width="1091" height="408" alt="изображение" src="https://github.com/user-attachments/assets/4f4e3b84-95eb-45d3-aec3-35957f93cabf" />
 
 При этом уязвимости для установленного **РЕД ОС** в **Dashboard** не отображаются. Это связано с тем, что система не входит в [официальный перечень операционных систем](https://documentation.wazuh.com/current/user-manual/capabilities/vulnerability-detection/how-it-works.html?utm_source=chatgpt.com), поддерживаемых модулем `Vulnerability Detection`.
 
