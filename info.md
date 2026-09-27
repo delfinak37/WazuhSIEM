@@ -1,7 +1,3 @@
-[wazuh-user@wazuh-server ~]$ sudo grep -i -E 'vulnerability-scanner|vulnerability|001' /var/ossec/logs/ossec.log | tail -50                                                                                                                     2026/09/27 11:41:38 wazuh-modulesd:vulnerability-scanner: INFO: Starting vulnerability_scanner module.                  2026/09/27 11:41:40 wazuh-modulesd:vulnerability-scanner: INFO: Starting database file decompression.                   2026/09/27 11:45:54 wazuh-modulesd:vulnerability-scanner: INFO: Database decompression finished.                        2026/09/27 11:45:55 wazuh-modulesd:vulnerability-scanner: INFO: Vulnerability scanner module started.                   2026/09/27 13:02:55 wazuh-modulesd:vulnerability-scanner: INFO: Stopping vulnerability_scanner module.                  2026/09/27 13:04:24 wazuh-modulesd:vulnerability-scanner: INFO: Starting vulnerability_scanner module.                  2026/09/27 13:04:25 wazuh-modulesd:vulnerability-scanner: WARNING: The 'feed-update-interval' option at module 'vulnerability-detection' must be at least 1 hour. Automatically set to 60 minutes.                                              2026/09/27 13:04:32 wazuh-modulesd:vulnerability-scanner: INFO: Vulnerability scanner module started.                   2026/09/27 13:04:38 indexer-connector: WARNING: Failed to sync agent '001': No available server                         2026/09/27 13:04:39 indexer-connector: WARNING: Failed to sync agent '001': No available server                         2026/09/27 13:04:39 indexer-connector: WARNING: Failed to sync agent '001': No available server                         2026/09/27 13:04:39 indexer-connector: WARNING: Failed to sync agent '001': No available server                         2026/09/27 13:04:39 indexer-connector: WARNING: Failed to sync agent '001': No available server                         2026/09/27 13:04:39 indexer-connector: WARNING: Failed to sync agent '001': No available server                         2026/09/27 13:04:39 indexer-connector: WARNING: Failed to sync agent '001': No available server                         2026/09/27 13:04:40 indexer-connector: WARNING: Failed to sync agent '001': No available server                         2026/09/27 13:34:27 wazuh-modulesd:vulnerability-scanner: INFO: Initiating update feed process.                         2026/09/27 13:48:32 wazuh-modulesd:vulnerability-scanner: INFO: Triggered a re-scan after content update.               2026/09/27 13:48:32 wazuh-modulesd:vulnerability-scanner: INFO: Feed update process completed.                          2026/09/27 13:51:27 wazuh-modulesd:vulnerability-scanner: INFO: Initiating update feed process.                         2026/09/27 14:14:00 wazuh-modulesd:vulnerability-scanner: INFO: Triggered a re-scan after content update.               2026/09/27 14:14:00 wazuh-modulesd:vulnerability-scanner: INFO: Feed update process completed.   
-[wazuh-user@wazuh-server ~]$ sudo grep -i 'openssl' /var/ossec/logs/ossec.log | tail -20                                [wazuh-user@wazuh-server ~]$                                                                                                                            
-
-
 ## Подготовка и настройка Wazuh
 
 - [Официальный образ wazuh](https://packages.wazuh.com/4.x/vm/wazuh-4.14.7.ova)
@@ -89,6 +85,17 @@ sudo nano /var/ossec/etc/ossec.conf
 На странице `IT Hygiene` можно ознакомится с более подробным описанием системы, значит сервер успешно работает и поддерживает сбор RPM-пакетов:
 
 <img width="1915" height="1039" alt="изображение" src="https://github.com/user-attachments/assets/23ed5190-910d-4936-bc9d-fdeba314451c" />
+
+## Обнаружение уязвимостей
+
+В **Wazuh** был включён модуль `Vulnerability Detection`. По журналам можно увидеть, что модуль успешно запускается, обновляет базу уязвимостей и выполняет повторное сканирование:
+
+
+При этом уязвимости для установленного **РЕД ОС** в **Dashboard** не отображаются. Это связано с тем, что система не входит в [официальный перечень операционных систем](https://documentation.wazuh.com/current/user-manual/capabilities/vulnerability-detection/how-it-works.html?utm_source=chatgpt.com), поддерживаемых модулем `Vulnerability Detection`.
+
+<img width="937" height="773" alt="изображение" src="https://github.com/user-attachments/assets/35aeca91-a222-4558-a110-c6cdc108edd8" />
+
+  - Выходит, что модуль `Vulnerability Detection` работает корректно, однако обнаружение и сопоставление **CVE** для **РЕД ОС** не гарантируется.
 
 ## Проверка соответствия требованиям безопасности
 
