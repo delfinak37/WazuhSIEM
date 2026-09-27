@@ -1,3 +1,9 @@
+curl -o wazuh-agent-4.14.7-1.x86_64.rpm https://packages.wazuh.com/4.x/yum/wazuh-agent-4.14.7-1.x86_64.rpm && sudo WAZUH_MANAGER='192.168.0.100' WAZUH_AGENT_NAME='Redos' rpm -ihv wazuh-agent-4.14.7-1.x86_64.rpm
+
+sudo systemctl daemon-reload
+sudo systemctl enable wazuh-agent
+sudo systemctl start wazuh-agent
+
 ## Подготовка и настройка Wazuh
 
 - [Официальный образ wazuh](https://packages.wazuh.com/4.x/vm/wazuh-4.14.7.ova)
@@ -22,7 +28,7 @@
 
 Далее необходимо заполнить поля:
 
-<img width="1912" height="1837" alt="изображение" src="https://github.com/user-attachments/assets/aacfcc4d-6e6e-4d39-8c2a-cab458fe0a78" />
+<img width="1912" height="1838" alt="изображение" src="https://github.com/user-attachments/assets/be0f80e0-28f0-4fa2-8b15-db66892f05df" />
 
 ## Подготовка и настройка РЕД ОС
 
