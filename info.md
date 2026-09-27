@@ -1,4 +1,4 @@
-<img width="1914" height="1271" alt="изображение" src="https://github.com/user-attachments/assets/21c53287-aabf-4ed0-ab01-a0550ceb31a9" />## Подготовка и настройка Wazuh
+## Подготовка и настройка Wazuh
 
 - [Официальный образ wazuh](https://packages.wazuh.com/4.x/vm/wazuh-4.14.7.ova)
 
@@ -75,6 +75,10 @@ sudo nano /var/ossec/etc/ossec.conf
 На **Сервере** (в том же файле, что и на агенте) необходимо проверить что в блоке `<vulnerability-detector>` стоит параметр `yes`:
 
 <img width="416" height="93" alt="изображение" src="https://github.com/user-attachments/assets/a3f286eb-82c7-4382-a4de-75a48f497087" />
+
+В web-панели сервера теперь можно ознакомится с полной информацией об агенте:
+
+<img width="1914" height="1271" alt="изображение" src="https://github.com/user-attachments/assets/21c53287-aabf-4ed0-ab01-a0550ceb31a9" />
 
 ## Инвентаризация
 
