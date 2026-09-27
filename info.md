@@ -76,13 +76,44 @@ sudo nano /var/ossec/etc/ossec.conf
 
 <img width="416" height="93" alt="изображение" src="https://github.com/user-attachments/assets/a3f286eb-82c7-4382-a4de-75a48f497087" />
 
-Перейдя на главную страницу агента в web-панели, можно увидеть основную информацию об агенте:
-
-<img width="1914" height="1271" alt="изображение" src="https://github.com/user-attachments/assets/e04f2f69-7949-4947-ad6a-8157749a454e" />
-
 ## Инвентаризация
 
 На странице `IT Hygiene` можно ознакомится с более подробным описанием системы, значит сервер успешно работает и поддерживает сбор RPM-пакетов:
 
 <img width="1915" height="1039" alt="изображение" src="https://github.com/user-attachments/assets/23ed5190-910d-4936-bc9d-fdeba314451c" />
 
+## Проверка соответствия требованиям безопасности
+
+Для проверки конфигурации **РЕД ОС** был использован модуль Security Configuration Assessment (SCA). Данный модуль позволяет проверять настройки операционной системы на соответствие заданным политикам безопасности.
+
+На агенте РЕД ОС в файле `/var/ossec/etc/ossec.conf` был проверен и настроен блок **<sca>**:
+
+```bash
+<sca>
+    <enabled>yes</enabled>
+    <scan_on_start>yes</scan_on_start>
+    <interval>1m</interval>
+    <skip_nfs>yes</skip_nfs>
+</sca>
+```
+
+При проверке стандартных политик было обнаружено, что имеющаяся политика cis_rhel10_linux.yml предназначена для RHEL 10. Поскольку на агенте используется РЕД ОС 8.0.3, данная политика не применяется:
+
+<img width="514" height="635" alt="изображение" src="https://github.com/user-attachments/assets/5010b2af-ab62-4592-aae1-2f3ac0be6f44" />
+
+<img width="1117" height="363" alt="изображение" src="https://github.com/user-attachments/assets/312b2f25-5709-4b2b-a379-3f0fcd2404ae" />
+
+Для проведения проверки была создана собственная SCA-политика, учитывающая конфигурацию РЕД ОС:
+
+<img width="871" height="603" alt="изображение" src="https://github.com/user-attachments/assets/7ff694b5-1fe2-4843-b7e6-18906bf46773" />
+
+  - В политике были заданы проверки различных параметров безопасности системы, в том числе состояния firewalld, SSH, системных файлов и наличия небезопасных сервисов.
+
+Пользовательская политика была подключена в конфигурации агента: 
+
+<img width="759" height="188" alt="изображение" src="https://github.com/user-attachments/assets/c3480762-5569-4d5d-8835-cfb550aa9690" />
+
+После выполнения проверки результаты стали доступны в веб-панели **Wazuh** в разделе **Endpoint → RED OS → SCA**:
+
+
+Единственная непройденная проверка связана с состоянием firewalld, поскольку на момент проведения эксперимента данный сервис был отключён.
