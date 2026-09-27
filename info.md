@@ -1,3 +1,4 @@
+sudo grep -i -E 'vulnerability|vulnerab|syscollector|indexer' /var/ossec/logs/ossec.log | tail -80
 ## Подготовка и настройка Wazuh
 
 - [Официальный образ wazuh](https://packages.wazuh.com/4.x/vm/wazuh-4.14.7.ova)
