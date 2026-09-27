@@ -76,6 +76,10 @@ sudo nano /var/ossec/etc/ossec.conf
 
 <img width="416" height="93" alt="изображение" src="https://github.com/user-attachments/assets/a3f286eb-82c7-4382-a4de-75a48f497087" />
 
+Перейдя на главную страницу агента в web-панели, можно увидеть основную информацию об агенте:
+
+<img width="1914" height="1271" alt="изображение" src="https://github.com/user-attachments/assets/e04f2f69-7949-4947-ad6a-8157749a454e" />
+
 ## Инвентаризация
 
 На странице `IT Hygiene` можно ознакомится с более подробным описанием системы, значит сервер успешно работает и поддерживает сбор RPM-пакетов:
