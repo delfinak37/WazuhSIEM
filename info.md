@@ -1,3 +1,7 @@
+sudo grep -i -E 'vulnerability-scanner|vulnerability|001' /var/ossec/logs/ossec.log | tail -50
+
+sudo grep -i 'openssl' /var/ossec/logs/ossec.log | tail -20
+
 ## Подготовка и настройка Wazuh
 
 - [Официальный образ wazuh](https://packages.wazuh.com/4.x/vm/wazuh-4.14.7.ova)
