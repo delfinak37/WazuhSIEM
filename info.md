@@ -71,3 +71,8 @@ sudo nano /var/ossec/etc/ossec.conf
 ```
 
 <img width="436" height="425" alt="изображение" src="https://github.com/user-attachments/assets/a08c7d3b-7ad2-42ee-a65d-7f9d4e69655d" />
+
+На **Сервере** (в том же файле, что и на агенте) необходимо проверить что в блоке `<vulnerability-detector>` стоит параметр `yes`:
+
+<img width="416" height="93" alt="изображение" src="https://github.com/user-attachments/assets/a3f286eb-82c7-4382-a4de-75a48f497087" />
+
