@@ -42,7 +42,7 @@
 curl -o wazuh-agent-4.14.7-1.x86_64.rpm https://packages.wazuh.com/4.x/yum/wazuh-agent-4.14.7-1.x86_64.rpm && sudo WAZUH_MANAGER='192.168.0.100' WAZUH_AGENT_NAME='Redos' rpm -ihv wazuh-agent-4.14.7-1.x86_64.rpm
 ```
 
-<img width="725" height="266" alt="изображение" src="https://github.com/user-attachments/assets/52f6986c-aeda-414d-9515-2c2bb9678a37" />
+<img width="726" height="250" alt="изображение" src="https://github.com/user-attachments/assets/2e517d7c-c76e-4cc1-924f-3b4023c1e5e0" />
 
 Запуск агента:
 
@@ -52,4 +52,4 @@ sudo systemctl enable wazuh-agent
 sudo systemctl start wazuh-agent
 ```
 
-<img width="729" height="248" alt="изображение" src="https://github.com/user-attachments/assets/c491e21e-5b62-4627-8268-f7259d095b24" />
+<img width="727" height="262" alt="изображение" src="https://github.com/user-attachments/assets/fc4724d0-051c-4613-b100-ed9218e21df5" />
