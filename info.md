@@ -53,3 +53,15 @@ sudo systemctl start wazuh-agent
 ```
 
 <img width="727" height="262" alt="изображение" src="https://github.com/user-attachments/assets/fc4724d0-051c-4613-b100-ed9218e21df5" />
+
+После установки в списке агентов появилось новое подключение:
+
+<img width="1912" height="1160" alt="изображение" src="https://github.com/user-attachments/assets/576a4c68-f0a9-4568-b7d7-ffeeb828ab5e" />
+
+Перейдя по ссылке `active` можно попасть на подробный список агентов с описанием каждого:
+
+<img width="1920" height="898" alt="изображение" src="https://github.com/user-attachments/assets/f6e0198f-a6e6-439d-a128-af2807049e5e" />
+
+## Проверка модулей
+
+
